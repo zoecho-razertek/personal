@@ -1,0 +1,1541 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MH Lock Onboarding</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <div class="demo-layout">
+      <section class="phone" aria-label="MH Lock onboarding">
+        <div class="status-bar" aria-hidden="true">
+          <div class="time">9:41</div>
+          <div class="status-icons">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+              <rect x="2" y="8" width="3" height="4" rx="0.5" fill="currentColor" />
+              <rect x="6.5" y="6" width="3" height="6" rx="0.5" fill="currentColor" />
+              <rect x="11" y="4" width="3" height="8" rx="0.5" fill="currentColor" />
+              <rect x="15.5" y="2" width="3" height="10" rx="0.5" fill="currentColor" opacity="0.32" />
+            </svg>
+            <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+              <path d="M1 5C3.35 2.75 6.05 1.6 8 1.6C9.95 1.6 12.65 2.75 15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              <path d="M3.25 7.55C4.8 6.2 6.4 5.5 8 5.5C9.6 5.5 11.2 6.2 12.75 7.55" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              <circle cx="8" cy="11" r="1.25" fill="currentColor" />
+            </svg>
+            <svg width="25" height="14" viewBox="0 0 25 14" fill="none">
+              <rect x="0.5" y="2" width="21" height="10" rx="2" stroke="currentColor" />
+              <rect x="22.5" y="5.2" width="2" height="3.6" rx="1" fill="currentColor" opacity="0.42" />
+              <rect x="2.25" y="3.75" width="17" height="6.5" rx="1" fill="currentColor" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="screen screen-preparation is-active" data-screen="preparation">
+        <button class="skip" type="button">稍後再設定</button>
+
+        <div class="app-icon" aria-hidden="true">
+          <img src="./assets/img_app_icon.png" alt="" />
+        </div>
+
+        <div class="content">
+          <div class="copy">
+            <h1>歡迎使用 MH Lock</h1>
+            <p>接下來將開始設定電子鎖與綁定卡片，此過程約會花費您五分鐘，請確認您已準備好以下清單中的項目：</p>
+          </div>
+
+          <ol class="checklist">
+            <li>
+              <span class="step">1</span>
+              <span>MH Lock 電子鎖</span>
+            </li>
+            <li>
+              <span class="step">2</span>
+              <span>可連線的 wifi 環境</span>
+            </li>
+            <li>
+              <span class="step">3</span>
+              <span>悠遊卡 / 一卡通</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="actions">
+          <button class="primary" id="startSetup" type="button">開始設定</button>
+          <div class="divider" aria-hidden="true">
+            <span></span>
+            <em>or</em>
+            <span></span>
+          </div>
+          <div class="share">
+            <p>加入親友已設定好的 MH Lock？</p>
+            <button id="openShareCodeButton" type="button">開啟共享條碼</button>
+          </div>
+        </div>
+        </div>
+
+        <div class="screen screen-share-code" data-screen="share-code" aria-hidden="true">
+          <div class="status-bar" aria-hidden="true">
+            <div class="time">9:41</div>
+            <div class="status-icons">
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+                <rect x="2" y="8" width="3" height="4" rx="0.5" fill="currentColor" />
+                <rect x="6.5" y="6" width="3" height="6" rx="0.5" fill="currentColor" />
+                <rect x="11" y="4" width="3" height="8" rx="0.5" fill="currentColor" />
+                <rect x="15.5" y="2" width="3" height="10" rx="0.5" fill="currentColor" opacity="0.32" />
+              </svg>
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+                <path d="M1 5C3.35 2.75 6.05 1.6 8 1.6C9.95 1.6 12.65 2.75 15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M3.25 7.55C4.8 6.2 6.4 5.5 8 5.5C9.6 5.5 11.2 6.2 12.75 7.55" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="8" cy="11" r="1.25" fill="currentColor" />
+              </svg>
+              <svg width="25" height="14" viewBox="0 0 25 14" fill="none">
+                <rect x="0.5" y="2" width="21" height="10" rx="2" stroke="currentColor" />
+                <rect x="22.5" y="5.2" width="2" height="3.6" rx="1" fill="currentColor" opacity="0.42" />
+                <rect x="2.25" y="3.75" width="17" height="6.5" rx="1" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="share-code-title">
+            <button class="back-button" data-goto="preparation" type="button" aria-label="返回準備頁">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15.5 5L8.5 12L15.5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <h2>我的共享條碼</h2>
+          </div>
+
+          <img class="share-code-qr" src="./assets/img_qrcode_share.png" alt="我的共享 QR Code" />
+          <p class="share-code-copy">掃描我的 QR Code，與我共用 MH Lock 電子鎖。</p>
+
+          <div class="share-code-actions">
+            <button class="primary" type="button">分享</button>
+            <button class="secondary-button" type="button">下載</button>
+          </div>
+
+          <div class="share-code-divider divider" aria-hidden="true">
+            <span></span>
+            <em>or</em>
+            <span></span>
+          </div>
+
+          <div class="share-code-home">
+            <p>已成功共用電子鎖？</p>
+            <button id="shareCodeHomeButton" type="button">前往首頁</button>
+          </div>
+        </div>
+
+        <div class="screen screen-add-home" data-screen="add-home" aria-hidden="true">
+          <div class="top-title">
+            <h2>新增電子鎖</h2>
+            <button type="button">稍後再設定</button>
+          </div>
+
+          <div class="form-content">
+            <p class="form-intro">請為您的 MH Lock 設定一個住宅位置與電子鎖名稱。</p>
+
+            <form class="lock-form">
+              <label class="field">
+                <span class="field-label">
+                  <span>電子鎖位置*</span>
+                  <em id="lockLocationCount">3/20</em>
+                </span>
+                <input id="lockLocationInput" value="我的家" maxlength="20" />
+              </label>
+
+              <label class="field">
+                <span class="field-label">
+                  <span>電子鎖名稱*</span>
+                  <em id="lockNameCount">3/20</em>
+                </span>
+                <input id="lockNameInput" value="大門鎖" maxlength="20" />
+              </label>
+
+              <label class="field">
+                <span class="field-label">
+                  <span>敘述</span>
+                  <em id="lockDescriptionCount">0/100</em>
+                </span>
+                <input id="lockDescriptionInput" placeholder="新增住宅敘述" maxlength="100" />
+              </label>
+
+              <div class="field">
+                <span class="field-label">
+                  <span>房間圖片</span>
+                  <em></em>
+                </span>
+                <button class="image-input" type="button" aria-label="新增房間圖片">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <rect x="5" y="7" width="22" height="18" rx="2" fill="#c2c2c2" />
+                    <circle cx="21.5" cy="12.5" r="3" fill="#fefefe" />
+                    <path d="M7 23L13.5 16.5L18 21L20.5 18.5L26 24H7Z" fill="#fefefe" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="next-actions">
+            <button class="primary" id="nextBindLock" type="button">下一步，綁定電子鎖</button>
+          </div>
+        </div>
+
+        <div class="screen screen-add-lock" data-screen="add-lock" aria-hidden="true">
+          <div class="bind-title">
+            <button class="back-button" data-goto="add-home" type="button" aria-label="返回新增電子鎖">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15.5 5L8.5 12L15.5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <h2>綁定 MH Lock</h2>
+            <span>1/3</span>
+            <button class="bind-skip" type="button">稍後再設定</button>
+          </div>
+
+          <div class="bind-content">
+            <div class="property-info">
+              <img src="./assets/img_photo_default_small.png" alt="" />
+              <div>
+                <p>我的家</p>
+                <p>大門</p>
+              </div>
+            </div>
+
+            <p class="bind-instruction">請確認 MH Lock 的電源已開啟 (綠燈閃爍)。</p>
+
+            <img class="lock-illustration" src="./assets/img_onboarding_addlock01.png" alt="MH Lock 綠燈閃爍示意" />
+          </div>
+
+          <div class="actions bind-actions">
+            <button class="primary" id="continueAddLock01" type="button">繼續</button>
+          </div>
+        </div>
+
+        <div class="screen screen-add-lock" data-screen="add-lock-settings" aria-hidden="true">
+          <div class="bind-title">
+            <button class="back-button" data-goto="add-lock" type="button" aria-label="返回綁定第一步">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15.5 5L8.5 12L15.5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <h2>綁定 MH Lock</h2>
+            <span>1/3</span>
+            <button class="bind-skip" type="button">稍後再設定</button>
+          </div>
+
+          <div class="bind-content">
+            <div class="property-info">
+              <img src="./assets/img_photo_default_small.png" alt="" />
+              <div>
+                <p>我的家</p>
+                <p>大門</p>
+              </div>
+            </div>
+
+            <p class="bind-instruction">請點選設定，進入電子鎖管理介面，管理密碼預設為「0000」。</p>
+
+            <img class="lock-illustration" src="./assets/img_onboarding_addlock02.png" alt="點選設定進入電子鎖管理介面示意" />
+          </div>
+
+          <div class="actions bind-actions">
+            <button class="primary" id="continueAddLockSettings" type="button">繼續</button>
+          </div>
+        </div>
+
+        <div class="screen screen-add-lock" data-screen="add-lock-wifi" aria-hidden="true">
+          <div class="bind-title">
+            <button class="back-button" data-goto="add-lock-settings" type="button" aria-label="返回綁定設定步驟">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15.5 5L8.5 12L15.5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <h2>綁定 MH Lock</h2>
+            <span>2/3</span>
+            <button class="bind-skip" type="button">稍後再設定</button>
+          </div>
+
+          <div class="bind-content">
+            <div class="property-info">
+              <img src="./assets/img_photo_default_small.png" alt="" />
+              <div>
+                <p>我的家</p>
+                <p>大門</p>
+              </div>
+            </div>
+
+            <p class="bind-instruction">請確認 MH Lock 已連上 wifi，若已連線，會在設備螢幕上看到「已連線」。</p>
+
+            <img class="lock-illustration" src="./assets/img_onboarding_addlock03.png" alt="確認 MH Lock 已連上 wifi 示意" />
+          </div>
+
+          <div class="actions bind-actions">
+            <button class="primary" id="continueAddLock02" type="button">繼續</button>
+          </div>
+        </div>
+
+        <div class="screen screen-add-lock" data-screen="add-lock-qr" aria-hidden="true">
+          <div class="bind-title">
+            <button class="back-button" data-goto="add-lock-wifi" type="button" aria-label="返回綁定 wifi 步驟">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15.5 5L8.5 12L15.5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <h2>綁定 MH Lock</h2>
+            <span>3/3</span>
+            <button class="bind-skip" type="button">稍後再設定</button>
+          </div>
+
+          <div class="bind-content">
+            <div class="property-info">
+              <img src="./assets/img_photo_default_small.png" alt="" />
+              <div>
+                <p>我的家</p>
+                <p>大門</p>
+              </div>
+            </div>
+
+            <p class="bind-instruction">選擇「綁定條碼」，並使用 MH Look App 掃描顯示的 QR Code，即可完成綁定。</p>
+
+            <img class="lock-illustration" src="./assets/img_onboarding_addlock04.png" alt="使用 MH Look App 掃描 QR Code 示意" />
+          </div>
+
+          <div class="actions bind-actions">
+            <button class="primary" id="continueAddLock03" type="button">繼續</button>
+          </div>
+        </div>
+
+        <div class="screen screen-identify-lock" data-screen="identify-lock" aria-hidden="true">
+          <div class="identify-status" aria-hidden="true">
+            <div class="time">9:41</div>
+            <div class="status-icons">
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+                <rect x="2" y="8" width="3" height="4" rx="0.5" fill="currentColor" />
+                <rect x="6.5" y="6" width="3" height="6" rx="0.5" fill="currentColor" />
+                <rect x="11" y="4" width="3" height="8" rx="0.5" fill="currentColor" />
+                <rect x="15.5" y="2" width="3" height="10" rx="0.5" fill="currentColor" opacity="0.32" />
+              </svg>
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+                <path d="M1 5C3.35 2.75 6.05 1.6 8 1.6C9.95 1.6 12.65 2.75 15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M3.25 7.55C4.8 6.2 6.4 5.5 8 5.5C9.6 5.5 11.2 6.2 12.75 7.55" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="8" cy="11" r="1.25" fill="currentColor" />
+              </svg>
+              <svg width="25" height="14" viewBox="0 0 25 14" fill="none">
+                <rect x="0.5" y="2" width="21" height="10" rx="2" stroke="currentColor" />
+                <rect x="22.5" y="5.2" width="2" height="3.6" rx="1" fill="currentColor" opacity="0.42" />
+                <rect x="2.25" y="3.75" width="17" height="6.5" rx="1" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="identify-title">
+            <button class="back-button identify-back" data-goto="add-lock-qr" type="button" aria-label="返回綁定條碼步驟">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15.5 5L8.5 12L15.5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <h2>識別電子鎖</h2>
+            <button class="identify-help" id="identifyHelpButton" type="button">說明</button>
+          </div>
+
+          <button class="scan-frame" id="scanFrameButton" type="button" aria-label="示意已掃描"></button>
+          <p class="identify-lock-name" id="identifyLockName">我的家・大門鎖</p>
+
+          <div class="identify-sheet">
+            <div class="sheet-handle" aria-hidden="true"></div>
+            <div class="sheet-copy">
+              <h2>綁定電子鎖</h2>
+              <p>請確認 MH Lock 的電源已開啟 (綠燈閃爍)，並已連上 wifi。</p>
+              <p>請點選主機螢幕上的設定 &gt; 輸入預設管理密碼「0000」&gt; 選擇「綁定條碼」，並掃描顯示的 QR Code。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="screen screen-identify-help" data-screen="identify-help" aria-hidden="true">
+          <div class="status-bar" aria-hidden="true">
+            <div class="time">9:41</div>
+            <div class="status-icons">
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+                <rect x="2" y="8" width="3" height="4" rx="0.5" fill="currentColor" />
+                <rect x="6.5" y="6" width="3" height="6" rx="0.5" fill="currentColor" />
+                <rect x="11" y="4" width="3" height="8" rx="0.5" fill="currentColor" />
+                <rect x="15.5" y="2" width="3" height="10" rx="0.5" fill="currentColor" opacity="0.32" />
+              </svg>
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+                <path d="M1 5C3.35 2.75 6.05 1.6 8 1.6C9.95 1.6 12.65 2.75 15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M3.25 7.55C4.8 6.2 6.4 5.5 8 5.5C9.6 5.5 11.2 6.2 12.75 7.55" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="8" cy="11" r="1.25" fill="currentColor" />
+              </svg>
+              <svg width="25" height="14" viewBox="0 0 25 14" fill="none">
+                <rect x="0.5" y="2" width="21" height="10" rx="2" stroke="currentColor" />
+                <rect x="22.5" y="5.2" width="2" height="3.6" rx="1" fill="currentColor" opacity="0.42" />
+                <rect x="2.25" y="3.75" width="17" height="6.5" rx="1" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="help-title">
+            <button class="back-button" data-goto="identify-lock" type="button" aria-label="返回識別電子鎖">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15.5 5L8.5 12L15.5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <h2>電子鎖綁定說明</h2>
+          </div>
+
+          <div class="help-segment" aria-label="電子鎖版本">
+            <button type="button">Mini</button>
+            <button class="is-active" type="button">Standard/Plus</button>
+          </div>
+
+          <div class="help-steps">
+            <section class="help-step">
+              <span class="help-step-number">1</span>
+              <div class="help-step-content">
+                <p>請確認 MH Lock 的電源已開啟 (綠燈閃爍)。</p>
+                <img src="./assets/img_onboarding_addlock01.png" alt="" />
+              </div>
+            </section>
+            <section class="help-step">
+              <span class="help-step-number">2</span>
+              <div class="help-step-content">
+                <p>請點選設定，進入電子鎖管理介面，管理密碼預設為「0000」。</p>
+                <img src="./assets/img_onboarding_addlock02.png" alt="" />
+              </div>
+            </section>
+            <section class="help-step">
+              <span class="help-step-number">3</span>
+              <div class="help-step-content">
+                <p>請確認 MH Lock 已連上 wifi，若已連線，會在設備螢幕上看到「已連線」。</p>
+                <img src="./assets/img_onboarding_addlock03.png" alt="" />
+              </div>
+            </section>
+            <section class="help-step">
+              <span class="help-step-number">4</span>
+              <div class="help-step-content">
+                <p>選擇「綁定條碼」，並使用 MH Look App 掃描顯示的 QR Code，即可完成綁定。</p>
+                <img src="./assets/img_onboarding_addlock04.png" alt="" />
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="screen screen-bind-success" data-screen="bind-success" aria-hidden="true">
+          <div class="success-title">
+            <h2>綁定 MH Lock</h2>
+          </div>
+
+          <div class="success-content">
+            <div class="property-info">
+              <img src="./assets/img_photo_default_small.png" alt="" />
+              <div>
+                <p id="successLocationName">我的家</p>
+                <p id="successLockName">大門鎖</p>
+              </div>
+            </div>
+
+            <p class="success-message">MH Lock Mini 已綁定至手機上，現在可以用手機操作電子鎖了！</p>
+
+            <img class="success-illustration" src="./assets/img_onboarding_bind_mini.png" alt="MH Lock Mini 已綁定成功示意" />
+          </div>
+
+          <div class="next-actions">
+            <button class="primary" id="nextSetLockCode" type="button">下一步，設定電子鎖</button>
+          </div>
+        </div>
+
+        <div class="screen screen-set-code" data-screen="set-code" aria-hidden="true">
+          <div class="success-title">
+            <h2>設定電子鎖密碼</h2>
+          </div>
+
+          <div class="set-code-content">
+            <div class="property-info">
+              <img src="./assets/img_photo_default_small.png" alt="" />
+              <div>
+                <p id="codeLocationName">我的家</p>
+                <p id="codeLockName">大門鎖</p>
+              </div>
+            </div>
+
+            <p class="set-code-message">您的預設開門密碼為「000000」，請更改密碼，以保障居家安全。</p>
+
+            <form class="code-form">
+              <label class="field">
+                <span class="field-label">
+                  <span>開門密碼*</span>
+                  <em></em>
+                </span>
+                <input id="doorCodeInput" type="password" inputmode="numeric" placeholder="請輸入密碼 (6-8 個數字)" maxlength="8" />
+                <span class="field-error" id="doorCodeError" aria-live="polite"></span>
+              </label>
+
+              <label class="field">
+                <span class="field-label">
+                  <span>確認開門密碼*</span>
+                  <em></em>
+                </span>
+                <input id="confirmDoorCodeInput" type="password" inputmode="numeric" placeholder="請確認開門密碼" maxlength="8" />
+                <span class="field-error" id="confirmDoorCodeError" aria-live="polite"></span>
+              </label>
+            </form>
+          </div>
+
+          <div class="code-actions">
+            <button class="primary primary-disabled" id="saveDoorCodeButton" type="button" disabled>儲存</button>
+            <button class="tertiary" id="skipDoorCodeButton" type="button">略過</button>
+          </div>
+        </div>
+
+        <div class="screen screen-set-mode" data-screen="set-mode" aria-hidden="true">
+          <div class="success-title">
+            <h2>設定電子鎖模式</h2>
+          </div>
+
+          <div class="set-mode-content">
+            <div class="property-info">
+              <img src="./assets/img_photo_default_small.png" alt="" />
+              <div>
+                <p id="modeLocationName">我的家</p>
+                <p id="modeLockName">大門鎖</p>
+              </div>
+            </div>
+
+            <div class="mode-copy">
+              <p>請選擇是否開啟 M-key 迎賓：</p>
+              <p><span></span>攜帶 M-key 靠近電子鎖時，專屬燈光將提前亮起，以獨特的迎賓燈光效果，溫暖迎接你回家。</p>
+            </div>
+
+            <div class="mode-options" role="radiogroup" aria-label="電子鎖模式">
+              <label class="mode-option">
+                <input type="radio" name="lockMode" checked />
+                <span class="radio-visual" aria-hidden="true"></span>
+                <span class="mode-option-text">
+                  <span>啟用 M-key 迎賓</span>
+                  <em>電子鎖會提前發亮，熱情地歡迎你回家。</em>
+                </span>
+              </label>
+
+              <label class="mode-option">
+                <input type="radio" name="lockMode" />
+                <span class="radio-visual" aria-hidden="true"></span>
+                <span class="mode-option-text">
+                  <span>不啟用</span>
+                  <em>沒有發亮的電子鎖，會靜靜地等待你開門回家。</em>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="code-actions">
+            <button class="primary" id="startAppFromModeButton" type="button">開始使用 App</button>
+            <button class="tertiary" id="addAccessCardButton" type="button">我要新增開門卡片</button>
+          </div>
+        </div>
+
+        <div class="screen screen-bind-success" data-screen="set-mode-battery" aria-hidden="true">
+          <div class="success-title">
+            <h2>設定成功！</h2>
+          </div>
+
+          <div class="success-content">
+            <div class="property-info">
+              <img src="./assets/img_photo_default_small.png" alt="" />
+              <div>
+                <p id="batteryModeLocationName">我的家</p>
+                <p id="batteryModeLockName">大門鎖</p>
+              </div>
+            </div>
+
+            <p class="success-message">您可以繼續新增開門卡片，或先前往首頁。</p>
+
+            <img class="success-illustration" src="./assets/img_onboarding_bind_mini.png" alt="MH Lock Mini 已綁定成功示意" />
+          </div>
+
+          <div class="code-actions">
+            <button class="primary" id="startAppFromBatteryModeButton" type="button">開始使用 App</button>
+            <button class="tertiary" id="addAccessCardFromBatteryModeButton" type="button">我要新增開門卡片</button>
+          </div>
+        </div>
+
+        <div class="screen screen-add-card" data-screen="add-card" id="addCardScreen" aria-hidden="true">
+          <div class="top-title">
+            <h2>綁定卡片</h2>
+            <button type="button">離開</button>
+          </div>
+
+          <div class="add-card-content">
+            <div class="property-info">
+              <img src="./assets/img_photo_default_small.png" alt="" />
+              <div>
+                <p id="cardLocationName">我的家</p>
+                <p id="cardLockName">大門鎖</p>
+              </div>
+            </div>
+
+            <p class="add-card-copy">請將卡片放置於手機背面進行感應，每組電子鎖最多可以綁定 10 組卡片。</p>
+
+            <img class="add-card-illustration" src="./assets/img_onboarding_addcard02.png" alt="手機背面感應卡片示意" />
+
+            <p class="card-countdown">請於時間內感應卡片... <span id="cardCountdownSeconds">30</span> 秒<span class="animated-dots" id="cardTrailingDots">...</span></p>
+
+            <div class="card-hint">
+              <img src="./assets/ic_basic_info_small.png" alt="" />
+              <span>感應中請勿移動卡片</span>
+            </div>
+
+            <div class="card-pagination" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="card-note">
+            <p>卡片說明：</p>
+            <p>支援悠遊卡、一卡通、門禁卡，請使用 MH Lock 電子鎖主機綁卡，或透過 Android 手機進行綁定。</p>
+            <button type="button">購買更多客製化卡片 &gt;&gt;</button>
+          </div>
+        </div>
+
+        <div class="screen screen-card-success" data-screen="card-success" aria-hidden="true">
+          <div class="top-title">
+            <h2>綁定卡片</h2>
+          </div>
+
+          <div class="card-success-content">
+            <div class="property-info">
+              <img src="./assets/img_photo_default_small.png" alt="" />
+              <div>
+                <p id="cardSuccessLocationName">我的家</p>
+                <p id="cardSuccessLockName">大門鎖</p>
+              </div>
+            </div>
+
+            <p class="card-success-copy">卡片已綁定！現在可以用這張卡片感應開啟 MH Lock 電子鎖了！請幫您的卡片命名吧！</p>
+
+            <label class="field">
+              <span class="field-label">
+                <span>卡片名稱*</span>
+                <em id="cardNameCount">0/20</em>
+              </span>
+              <input id="cardNameInput" placeholder="請幫您的卡片命名吧！" maxlength="20" />
+            </label>
+
+            <img class="card-success-illustration" src="./assets/img_onboarding_addcard03.png" alt="卡片已綁定成功示意" />
+          </div>
+
+          <div class="code-actions">
+            <button class="primary primary-disabled" id="startAppButton" type="button" disabled>開始使用 App</button>
+            <button class="tertiary tertiary-disabled" id="bindAnotherCardButton" type="button" disabled>繼續綁定卡片</button>
+          </div>
+        </div>
+
+        <div class="screen screen-home" data-screen="home" aria-hidden="true">
+          <div class="home-scroll">
+            <div class="home-header">
+              <img class="home-avatar" src="./assets/img_default_avatar_small.png" alt="" />
+              <p id="homeGreeting">Hi 你好！</p>
+              <button type="button" aria-label="新增電子鎖">
+                <img src="./assets/ic_basic_add.png" alt="" />
+              </button>
+            </div>
+
+            <div class="home-heading">
+              <h1><span id="homeLocationName">台北我家</span> <span class="home-badge">1</span></h1>
+              <p id="homeDescription">台北市中山區中山北路一段232巷22弄213號6樓之一</p>
+              <button class="home-more" type="button" aria-label="更多">
+                <img src="./assets/ic_basic_more.png" alt="" />
+              </button>
+            </div>
+
+            <div class="home-body">
+              <div class="home-cards-track">
+                <div class="home-lock-card">
+                  <div class="home-photo">
+                    <img src="./assets/Photo.png" alt="" />
+                    <button type="button" aria-label="電子鎖設定">
+                      <img src="./assets/ic_basic_device_qrcode.png" alt="" />
+                    </button>
+                  </div>
+                  <button class="unlock-button" type="button">
+                    <img src="./assets/ic_basic_lock_main.png" alt="" />
+                    <span>點擊解鎖</span>
+                  </button>
+                  <div class="home-card-body">
+                    <h2 id="homeLockName">大門鎖</h2>
+                    <div class="home-status-list">
+                      <p><img src="./assets/ic_s_lock.png" alt="" />08:24 已自動上鎖</p>
+                      <p><img class="home-connection-icon" src="./assets/ic_s_connect_g.png" alt="" /><span class="home-connection-text">連線正常</span></p>
+                    </div>
+                    <div class="battery-grid">
+                      <div class="battery-card">
+                        <span><img src="./assets/ic_battery.png" alt="" /><span class="home-outdoor-power-label">門外電量</span></span>
+                        <strong class="home-outdoor-power-value">90%</strong>
+                      </div>
+                      <div class="battery-card battery-low">
+                        <span><img src="./assets/ic_battery_r.png" alt="" />門內低電量！</span>
+                        <strong>10%</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="home-lock-card is-inactive">
+                  <div class="home-photo">
+                    <img src="./assets/Photo.png" alt="" />
+                    <button type="button" aria-label="電子鎖設定">
+                      <img src="./assets/ic_basic_device_qrcode.png" alt="" />
+                    </button>
+                  </div>
+                  <button class="unlock-button" type="button">
+                    <img src="./assets/ic_basic_lock_main.png" alt="" />
+                    <span>點擊解鎖</span>
+                  </button>
+                  <div class="home-card-body">
+                    <h2>後門鎖</h2>
+                    <div class="home-status-list">
+                      <p><img src="./assets/ic_s_lock.png" alt="" />10:15 已自動上鎖</p>
+                      <p><img class="home-connection-icon" src="./assets/ic_s_connect_g.png" alt="" /><span class="home-connection-text">連線正常</span></p>
+                    </div>
+                    <div class="battery-grid">
+                      <div class="battery-card">
+                        <span><img src="./assets/ic_battery.png" alt="" /><span class="home-outdoor-power-label">門外電量</span></span>
+                        <strong class="home-outdoor-power-value">75%</strong>
+                      </div>
+                      <div class="battery-card">
+                        <span><img src="./assets/ic_battery.png" alt="" />門內電量</span>
+                        <strong>60%</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="home-lock-card is-inactive">
+                  <div class="home-photo">
+                    <img src="./assets/Photo.png" alt="" />
+                    <button type="button" aria-label="電子鎖設定">
+                      <img src="./assets/ic_basic_device_qrcode.png" alt="" />
+                    </button>
+                  </div>
+                  <button class="unlock-button" type="button">
+                    <img src="./assets/ic_basic_lock_main.png" alt="" />
+                    <span>點擊解鎖</span>
+                  </button>
+                  <div class="home-card-body">
+                    <h2>車庫門鎖</h2>
+                    <div class="home-status-list">
+                      <p><img src="./assets/ic_s_lock.png" alt="" />12:08 已自動上鎖</p>
+                      <p><img class="home-connection-icon" src="./assets/ic_s_connect_g.png" alt="" /><span class="home-connection-text">連線正常</span></p>
+                    </div>
+                    <div class="battery-grid">
+                      <div class="battery-card">
+                        <span><img src="./assets/ic_battery.png" alt="" /><span class="home-outdoor-power-label">門外電量</span></span>
+                        <strong class="home-outdoor-power-value">82%</strong>
+                      </div>
+                      <div class="battery-card">
+                        <span><img src="./assets/ic_battery.png" alt="" />門內電量</span>
+                        <strong>68%</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="home-pagination" aria-hidden="true">
+                <span class="home-dot is-active"></span>
+                <span class="home-dot"></span>
+                <span class="home-dot"></span>
+              </div>
+
+              <button class="switch-home" type="button">切換至其他住宅</button>
+            </div>
+          </div>
+
+          <nav class="home-tabs" aria-label="主要導覽">
+            <button class="is-active" type="button"><img src="./assets/ic_home_focus.png" alt="" />電子鎖</button>
+            <button type="button"><img src="./assets/ic_notification.png" alt="" />佈告欄</button>
+            <button type="button"><img src="./assets/ic_setting.png" alt="" />設定</button>
+          </nav>
+        </div>
+
+        <div class="screen screen-select-location" data-screen="select-location" aria-hidden="true">
+          <!-- Status bar -->
+          <div class="status-bar" aria-hidden="true">
+            <div class="time">9:41</div>
+            <div class="status-icons">
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+                <rect x="2" y="8" width="3" height="4" rx="0.5" fill="currentColor" />
+                <rect x="6.5" y="6" width="3" height="6" rx="0.5" fill="currentColor" />
+                <rect x="11" y="4" width="3" height="8" rx="0.5" fill="currentColor" />
+                <rect x="15.5" y="2" width="3" height="10" rx="0.5" fill="currentColor" opacity="0.32" />
+              </svg>
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+                <path d="M1 5C3.35 2.75 6.05 1.6 8 1.6C9.95 1.6 12.65 2.75 15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M3.25 7.55C4.8 6.2 6.4 5.5 8 5.5C9.6 5.5 11.2 6.2 12.75 7.55" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="8" cy="11" r="1.25" fill="currentColor" />
+              </svg>
+              <svg width="25" height="14" viewBox="0 0 25 14" fill="none">
+                <rect x="0.5" y="2" width="21" height="10" rx="2" stroke="currentColor" />
+                <rect x="22.5" y="5.2" width="2" height="3.6" rx="1" fill="currentColor" opacity="0.42" />
+                <rect x="2.25" y="3.75" width="17" height="6.5" rx="1" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Nav bar: back + centered title -->
+          <div class="sel-loc-titlebar">
+            <button class="back-button" data-goto="home" type="button" aria-label="返回">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15.5 5L8.5 12L15.5 19" stroke="#5d697f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <p class="sel-loc-page-title">新增電子鎖</p>
+          </div>
+
+          <!-- Scrollable content -->
+          <div class="sel-loc-content">
+
+            <!-- 台北我家 -->
+            <div class="sel-loc-prop-header">
+              <div class="sel-loc-prop-info">
+                <p class="sel-loc-prop-name">台北我家</p>
+                <p class="sel-loc-prop-addr">台北市中山區中山東路一段232巷22弄213號6樓之ㄧ</p>
+              </div>
+            </div>
+
+            <div class="sel-loc-table">
+              <button class="sel-loc-cell sel-loc-cell-top" type="button">
+                <div class="sel-loc-cell-main">
+                  <span class="sel-loc-circle"></span>
+                  <span class="sel-loc-name sel-loc-name-bound">大門</span>
+                </div>
+                <span class="sel-loc-status-bound">已綁定</span>
+              </button>
+              <button class="sel-loc-cell sel-loc-cell-mid" type="button">
+                <div class="sel-loc-cell-main">
+                  <span class="sel-loc-circle"></span>
+                  <span class="sel-loc-name sel-loc-name-bound">主臥</span>
+                </div>
+                <span class="sel-loc-status-bound">已綁定</span>
+              </button>
+              <button class="sel-loc-cell sel-loc-cell-add sel-loc-cell-bot" type="button">
+                <span class="sel-loc-add-text">+ 新增電子鎖</span>
+              </button>
+            </div>
+
+            <!-- divider -->
+            <div class="sel-loc-divider"></div>
+
+            <!-- 桃園老家 -->
+            <div class="sel-loc-prop-header">
+              <div class="sel-loc-prop-info">
+                <p class="sel-loc-prop-name">桃園老家</p>
+                <p class="sel-loc-prop-addr">台北市中山區中山東路一段232巷22弄213號6樓之ㄧ之ㄧ之ㄧ之ㄧ</p>
+              </div>
+            </div>
+
+            <div class="sel-loc-table">
+              <button class="sel-loc-cell sel-loc-cell-top" type="button">
+                <div class="sel-loc-cell-main">
+                  <span class="sel-loc-circle"></span>
+                  <span class="sel-loc-name sel-loc-name-bound">大門大門大門大門大門大門大門大...</span>
+                </div>
+                <span class="sel-loc-status-bound">已綁定</span>
+              </button>
+              <button class="sel-loc-cell sel-loc-cell-add sel-loc-cell-mid" id="selLocGo" type="button">
+                <div class="sel-loc-cell-main">
+                  <span class="sel-loc-circle"></span>
+                  <span class="sel-loc-name">後門後門後門後門後門後門後...</span>
+                </div>
+                <div class="sel-loc-cell-right">
+                  <span class="sel-loc-status-goto">前往綁定</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="#5d697f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </button>
+              <button class="sel-loc-cell sel-loc-cell-add sel-loc-cell-bot" type="button">
+                <span class="sel-loc-add-text">+ 新增電子鎖</span>
+              </button>
+            </div>
+
+            <!-- divider -->
+            <div class="sel-loc-divider"></div>
+
+            <!-- 測試的家 -->
+            <div class="sel-loc-prop-header">
+              <div class="sel-loc-prop-info">
+                <p class="sel-loc-prop-name">測試的家</p>
+              </div>
+            </div>
+
+            <div class="sel-loc-table">
+              <button class="sel-loc-cell sel-loc-cell-add sel-loc-cell-only" type="button">
+                <span class="sel-loc-add-text">+ 新增電子鎖</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 掃描電子鎖 (select-location → scan-bind → bind-result) -->
+        <div class="screen screen-identify-lock" data-screen="scan-bind" aria-hidden="true">
+          <div class="identify-status" aria-hidden="true">
+            <div class="time">9:41</div>
+            <div class="status-icons">
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+                <rect x="2" y="8" width="3" height="4" rx="0.5" fill="currentColor" />
+                <rect x="6.5" y="6" width="3" height="6" rx="0.5" fill="currentColor" />
+                <rect x="11" y="4" width="3" height="8" rx="0.5" fill="currentColor" />
+                <rect x="15.5" y="2" width="3" height="10" rx="0.5" fill="currentColor" opacity="0.32" />
+              </svg>
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+                <path d="M1 5C3.35 2.75 6.05 1.6 8 1.6C9.95 1.6 12.65 2.75 15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M3.25 7.55C4.8 6.2 6.4 5.5 8 5.5C9.6 5.5 11.2 6.2 12.75 7.55" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="8" cy="11" r="1.25" fill="currentColor" />
+              </svg>
+              <svg width="25" height="14" viewBox="0 0 25 14" fill="none">
+                <rect x="0.5" y="2" width="21" height="10" rx="2" stroke="currentColor" />
+                <rect x="22.5" y="5.2" width="2" height="3.6" rx="1" fill="currentColor" opacity="0.42" />
+                <rect x="2.25" y="3.75" width="17" height="6.5" rx="1" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="identify-title">
+            <button class="back-button identify-back" data-goto="select-location" type="button" aria-label="返回選擇位置">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15.5 5L8.5 12L15.5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <h2>識別電子鎖</h2>
+          </div>
+
+          <button class="scan-frame" id="scanBindFrame" type="button" aria-label="示意已掃描"></button>
+          <p class="identify-lock-name">我的家・後門鎖</p>
+
+          <div class="identify-sheet">
+            <div class="sheet-handle" aria-hidden="true"></div>
+            <div class="sheet-copy">
+              <h2>綁定電子鎖</h2>
+              <p>請確認 MH Lock 的電源已開啟 (綠燈閃爍)，並已連上 wifi。</p>
+              <p>請點選主機螢幕上的設定 &gt; 輸入預設管理密碼「0000」&gt; 選擇「綁定條碼」，並掃描顯示的 QR Code。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 綁定完成 (參照 Figma 7055-106161) -->
+        <div class="screen screen-bind-result" data-screen="bind-result" aria-hidden="true">
+          <div class="status-bar" aria-hidden="true">
+            <div class="time">9:41</div>
+            <div class="status-icons">
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+                <rect x="2" y="8" width="3" height="4" rx="0.5" fill="currentColor" />
+                <rect x="6.5" y="6" width="3" height="6" rx="0.5" fill="currentColor" />
+                <rect x="11" y="4" width="3" height="8" rx="0.5" fill="currentColor" />
+                <rect x="15.5" y="2" width="3" height="10" rx="0.5" fill="currentColor" opacity="0.32" />
+              </svg>
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+                <path d="M1 5C3.35 2.75 6.05 1.6 8 1.6C9.95 1.6 12.65 2.75 15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M3.25 7.55C4.8 6.2 6.4 5.5 8 5.5C9.6 5.5 11.2 6.2 12.75 7.55" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="8" cy="11" r="1.25" fill="currentColor" />
+              </svg>
+              <svg width="25" height="14" viewBox="0 0 25 14" fill="none">
+                <rect x="0.5" y="2" width="21" height="10" rx="2" stroke="currentColor" />
+                <rect x="22.5" y="5.2" width="2" height="3.6" rx="1" fill="currentColor" opacity="0.42" />
+                <rect x="2.25" y="3.75" width="17" height="6.5" rx="1" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="bind-result-titlebar">
+            <button class="back-button" data-goto="scan-bind" type="button" aria-label="返回掃描">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15.5 5L8.5 12L15.5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="bind-result-title-group">
+              <h2 class="bind-result-title">新增電子鎖</h2>
+              <span class="bind-result-step">1/2</span>
+            </div>
+            <button class="bind-result-home-btn" id="bindResultHomeBtn" type="button">回首頁</button>
+          </div>
+
+          <div class="bind-result-content">
+            <div class="bind-result-propinfo">
+              <img class="bind-result-house-img" src="./assets/img_photo_default_small.png" alt="" />
+              <div class="bind-result-proptext">
+                <p class="bind-result-prop-name">我的家</p>
+                <p class="bind-result-lock-label">大門鎖3</p>
+              </div>
+            </div>
+
+            <p class="bind-result-desc">電子鎖已綁定至手機上，可以用手機遠端操作 MH Lock 了，也可以左右滑動來切換電子鎖喔！</p>
+
+            <img class="bind-result-img" src="./assets/img_onboarding_newlock.png" alt="" />
+          </div>
+
+          <div class="bind-result-bottom">
+            <button class="bind-result-btn-primary" id="bindResultNext" type="button">下一步，設定開門密碼</button>
+            <div class="bind-result-or">
+              <span class="bind-result-or-line"></span>
+              <span class="bind-result-or-text">or</span>
+              <span class="bind-result-or-line"></span>
+            </div>
+            <div class="bind-result-copy">
+              <p class="bind-result-copy-text">想使用與現有門鎖相同的成員與開鎖資料？</p>
+              <button class="bind-result-copy-link" type="button">複製資料</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="lock-popup" id="addLockPopup" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="addLockPopupTitle">
+          <div class="lock-popup-backdrop" id="addLockPopupBackdrop"></div>
+          <div class="lock-popup-inner">
+            <div class="lock-popup-card">
+              <h2 id="addLockPopupTitle" class="lock-popup-title">新增電子鎖</h2>
+              <img class="lock-popup-img" src="./assets/img_popup_addlock.png" alt="" />
+              <p class="lock-popup-desc">請選擇電子鎖要綁定在哪一個位置上</p>
+              <div class="lock-popup-actions">
+                <button class="lock-popup-btn-current" id="popupSetupNewLock" type="button">現在位置</button>
+                <button class="lock-popup-btn-new" id="popupOpenShareCode" type="button">新位置</button>
+              </div>
+            </div>
+            <button class="lock-popup-close" id="addLockPopupClose" type="button" aria-label="關閉">
+              <img src="./assets/btn_close.png" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="confirm-dialog" id="deferSetupDialog" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="deferSetupTitle">
+          <div class="confirm-card">
+            <h2 id="deferSetupTitle">稍後再設定？</h2>
+            <p>確定要離開設定電子鎖流程嗎？您可從首頁的「＋」按鈕再次開始設定電子鎖。</p>
+            <div class="confirm-actions">
+              <button type="button" id="returnSetupButton">返回</button>
+              <button class="confirm-primary" type="button" id="confirmDeferSetupButton">稍後再設定</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="scenario-panel" aria-label="情境切換">
+        <div class="scenario-group">
+          <p class="scenario-heading">流程</p>
+          <button class="scenario-button is-active" type="button" data-scenario="plugged">長接電</button>
+          <button class="scenario-button" type="button" data-scenario="battery">使用電池</button>
+        </div>
+        <div class="scenario-group">
+          <p class="scenario-heading">首頁</p>
+          <button class="scenario-button" type="button" data-scenario="home-normal">正常</button>
+          <button class="scenario-button" type="button" data-scenario="home-disconnected">A斷線</button>
+          <button class="scenario-button" type="button" data-scenario="home-a-plugged">A長接電</button>
+          <button class="scenario-button" type="button" data-scenario="home-ac-plugged">AC長接電</button>
+        </div>
+      </aside>
+      </div>
+    </main>
+    <script>
+      const startButton = document.querySelector('#startSetup');
+      const openShareCodeButton = document.querySelector('#openShareCodeButton');
+      const shareCodeHomeButton = document.querySelector('#shareCodeHomeButton');
+      const nextBindLockButton = document.querySelector('#nextBindLock');
+      const continueAddLock01Button = document.querySelector('#continueAddLock01');
+      const continueAddLockSettingsButton = document.querySelector('#continueAddLockSettings');
+      const continueAddLock02Button = document.querySelector('#continueAddLock02');
+      const continueAddLock03Button = document.querySelector('#continueAddLock03');
+      const scanFrameButton = document.querySelector('#scanFrameButton');
+      const identifyHelpButton = document.querySelector('#identifyHelpButton');
+      const nextSetLockCodeButton = document.querySelector('#nextSetLockCode');
+      const skipDoorCodeButton = document.querySelector('#skipDoorCodeButton');
+      const addAccessCardButton = document.querySelector('#addAccessCardButton');
+      const addCardScreen = document.querySelector('#addCardScreen');
+      const lockLocationInput = document.querySelector('#lockLocationInput');
+      const lockNameInput = document.querySelector('#lockNameInput');
+      const lockLocationCount = document.querySelector('#lockLocationCount');
+      const lockNameCount = document.querySelector('#lockNameCount');
+      const identifyLockName = document.querySelector('#identifyLockName');
+      const successLocationName = document.querySelector('#successLocationName');
+      const successLockName = document.querySelector('#successLockName');
+      const codeLocationName = document.querySelector('#codeLocationName');
+      const codeLockName = document.querySelector('#codeLockName');
+      const modeLocationName = document.querySelector('#modeLocationName');
+      const modeLockName = document.querySelector('#modeLockName');
+      const batteryModeLocationName = document.querySelector('#batteryModeLocationName');
+      const batteryModeLockName = document.querySelector('#batteryModeLockName');
+      const cardLocationName = document.querySelector('#cardLocationName');
+      const cardLockName = document.querySelector('#cardLockName');
+      const cardSuccessLocationName = document.querySelector('#cardSuccessLocationName');
+      const cardSuccessLockName = document.querySelector('#cardSuccessLockName');
+      const homeLockName = document.querySelector('#homeLockName');
+      const homeLocationName = document.querySelector('#homeLocationName');
+      const homeDescription = document.querySelector('#homeDescription');
+      const homeGreeting = document.querySelector('#homeGreeting');
+      const lockDescriptionInput = document.querySelector('#lockDescriptionInput');
+      const lockDescriptionCount = document.querySelector('#lockDescriptionCount');
+      const cardNameInput = document.querySelector('#cardNameInput');
+      const cardNameCount = document.querySelector('#cardNameCount');
+      const startAppButton = document.querySelector('#startAppButton');
+      const startAppFromModeButton = document.querySelector('#startAppFromModeButton');
+      const startAppFromBatteryModeButton = document.querySelector('#startAppFromBatteryModeButton');
+      const addAccessCardFromBatteryModeButton = document.querySelector('#addAccessCardFromBatteryModeButton');
+      const bindAnotherCardButton = document.querySelector('#bindAnotherCardButton');
+      const cardCountdownSeconds = document.querySelector('#cardCountdownSeconds');
+      const cardTrailingDots = document.querySelector('#cardTrailingDots');
+      const doorCodeInput = document.querySelector('#doorCodeInput');
+      const confirmDoorCodeInput = document.querySelector('#confirmDoorCodeInput');
+      const doorCodeError = document.querySelector('#doorCodeError');
+      const confirmDoorCodeError = document.querySelector('#confirmDoorCodeError');
+      const saveDoorCodeButton = document.querySelector('#saveDoorCodeButton');
+      const deferSetupDialog = document.querySelector('#deferSetupDialog');
+      const returnSetupButton = document.querySelector('#returnSetupButton');
+      const confirmDeferSetupButton = document.querySelector('#confirmDeferSetupButton');
+      const deferSetupButtons = Array.from(document.querySelectorAll('button')).filter((button) => button.textContent.trim() === '稍後再設定' && button.id !== 'confirmDeferSetupButton');
+      const standardTutorialButtons = document.querySelectorAll('.standardTutorialButton');
+      const backButtons = document.querySelectorAll('[data-goto]');
+      const screens = document.querySelectorAll('.screen');
+      const scenarioButtons = document.querySelectorAll('.scenario-button');
+      let cardCountdownTimer = null;
+      let cardDotsTimer = null;
+      const boundCardNames = [];
+      let savedDescription = '';
+      let currentUserName = '';
+      let addHomeNextScreen = 'add-lock';
+      let currentFlowScenario = 'plugged';
+
+      function getLockNames() {
+        const location = lockLocationInput?.value.trim() || '我的家';
+        const lockName = lockNameInput?.value.trim() || '大門鎖';
+        return { location, lockName };
+      }
+
+      function updateLockInputCounts() {
+        if (lockLocationCount && lockLocationInput) {
+          lockLocationCount.textContent = `${lockLocationInput.value.length}/20`;
+        }
+        if (lockNameCount && lockNameInput) {
+          lockNameCount.textContent = `${lockNameInput.value.length}/20`;
+        }
+      }
+
+      function updateHomeGreeting() {
+        const name = currentUserName.trim();
+        if (homeGreeting) {
+          homeGreeting.textContent = name ? `Hi ${name}!` : 'Hi 你好！';
+        }
+      }
+
+      function updateHomeBodyPosition() {
+        const heading = document.querySelector('.home-heading');
+        const body = document.querySelector('.home-body');
+        if (!heading || !body) return;
+        body.style.top = (heading.offsetTop + heading.offsetHeight + 11) + 'px';
+      }
+
+      function equalizeCardHeights() {
+        const cards = document.querySelectorAll('.home-lock-card');
+        cards.forEach(c => {
+          c.style.height = '';
+          c.style.minHeight = '';
+        });
+      }
+
+      function initHomeCarousel() {
+        const track = document.querySelector('.home-cards-track');
+        const dots = document.querySelectorAll('.home-dot');
+        const cards = document.querySelectorAll('.home-lock-card');
+        if (!track || cards.length <= 1) return;
+
+        function updateActiveCard() {
+          const trackCenter = track.scrollLeft + track.clientWidth / 2;
+          let activeIndex = 0;
+          let minDist = Infinity;
+          cards.forEach((card, i) => {
+            const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+            const dist = Math.abs(cardCenter - trackCenter);
+            if (dist < minDist) {
+              minDist = dist;
+              activeIndex = i;
+            }
+          });
+          cards.forEach((card, i) => card.classList.toggle('is-inactive', i !== activeIndex));
+          dots.forEach((dot, i) => dot.classList.toggle('is-active', i === activeIndex));
+        }
+
+        if (!track.dataset.carouselReady) {
+          track.addEventListener('scroll', updateActiveCard, { passive: true });
+          track.dataset.carouselReady = 'true';
+        }
+        updateActiveCard();
+      }
+
+      function updateLockNameDisplays() {
+        const { location, lockName } = getLockNames();
+        if (identifyLockName) {
+          identifyLockName.textContent = `${location}・${lockName}`;
+        }
+        if (successLocationName) {
+          successLocationName.textContent = location;
+        }
+        if (successLockName) {
+          successLockName.textContent = lockName;
+        }
+        if (codeLocationName) {
+          codeLocationName.textContent = location;
+        }
+        if (codeLockName) {
+          codeLockName.textContent = lockName;
+        }
+        if (modeLocationName) {
+          modeLocationName.textContent = location;
+        }
+        if (modeLockName) {
+          modeLockName.textContent = lockName;
+        }
+        if (batteryModeLocationName) {
+          batteryModeLocationName.textContent = location;
+        }
+        if (batteryModeLockName) {
+          batteryModeLockName.textContent = lockName;
+        }
+        if (cardLocationName) {
+          cardLocationName.textContent = location;
+        }
+        if (cardLockName) {
+          cardLockName.textContent = lockName;
+        }
+        if (cardSuccessLocationName) {
+          cardSuccessLocationName.textContent = location;
+        }
+        if (cardSuccessLockName) {
+          cardSuccessLockName.textContent = lockName;
+        }
+        if (homeLockName) {
+          homeLockName.textContent = lockName;
+        }
+        if (homeLocationName) {
+          homeLocationName.textContent = location;
+        }
+        if (homeDescription) {
+          homeDescription.textContent = savedDescription;
+          homeDescription.style.display = savedDescription ? '' : 'none';
+        }
+        updateHomeGreeting();
+        requestAnimationFrame(() => {
+          updateHomeBodyPosition();
+          equalizeCardHeights();
+          initHomeCarousel();
+        });
+      }
+
+      function setFieldError(input, errorNode, message) {
+        input?.classList.toggle('is-error', Boolean(message));
+        if (errorNode) {
+          errorNode.textContent = message;
+        }
+      }
+
+      function validateDoorCode() {
+        const code = doorCodeInput?.value.trim() || '';
+        const confirmCode = confirmDoorCodeInput?.value.trim() || '';
+        const hasCode = code.length > 0;
+        const hasConfirmCode = confirmCode.length > 0;
+        const isCodeFormatValid = /^\d{6,8}$/.test(code);
+        const isConfirmCodeFormatValid = /^\d{6,8}$/.test(confirmCode);
+        const isSameCode = code === confirmCode;
+
+        let codeMessage = '';
+        let confirmMessage = '';
+
+        if (hasCode && !isCodeFormatValid) {
+          codeMessage = '請輸入 6-8 個數字';
+        }
+
+        if (hasConfirmCode && !isConfirmCodeFormatValid) {
+          confirmMessage = '請輸入 6-8 個數字';
+        } else if (hasCode && hasConfirmCode && isCodeFormatValid && !isSameCode) {
+          confirmMessage = '確認密碼與開門密碼不一致';
+        }
+
+        setFieldError(doorCodeInput, doorCodeError, codeMessage);
+        setFieldError(confirmDoorCodeInput, confirmDoorCodeError, confirmMessage);
+
+        const canSave = isCodeFormatValid && isConfirmCodeFormatValid && isSameCode;
+        saveDoorCodeButton?.toggleAttribute('disabled', !canSave);
+        saveDoorCodeButton?.classList.toggle('primary-disabled', !canSave);
+      }
+
+      function validateCardName() {
+        const value = cardNameInput?.value.trim() || '';
+        const canContinue = value.length > 0;
+        if (cardNameCount) {
+          cardNameCount.textContent = `${value.length}/20`;
+        }
+        startAppButton?.toggleAttribute('disabled', !canContinue);
+        bindAnotherCardButton?.toggleAttribute('disabled', !canContinue);
+        startAppButton?.classList.toggle('primary-disabled', !canContinue);
+        bindAnotherCardButton?.classList.toggle('tertiary-disabled', !canContinue);
+      }
+
+      function resetCardNameForm() {
+        if (cardNameInput) {
+          cardNameInput.value = '';
+        }
+        validateCardName();
+      }
+
+      function saveCurrentCardName() {
+        const value = cardNameInput?.value.trim() || '';
+        if (value) {
+          boundCardNames.push(value);
+        }
+      }
+
+      function showCardSuccessForNewCard() {
+        resetCardNameForm();
+        showScreen('card-success');
+      }
+
+      function openDeferSetupDialog() {
+        deferSetupDialog?.classList.add('is-open');
+        deferSetupDialog?.setAttribute('aria-hidden', 'false');
+      }
+
+      function closeDeferSetupDialog() {
+        deferSetupDialog?.classList.remove('is-open');
+        deferSetupDialog?.setAttribute('aria-hidden', 'true');
+      }
+
+      function updateHomeConnectionStatus(message, isError = false) {
+        document.querySelectorAll('.home-connection-text').forEach((item) => {
+          item.textContent = message;
+          item.classList.toggle('is-error', isError);
+        });
+        document.querySelectorAll('.home-connection-icon').forEach((item) => {
+          item.src = isError ? './assets/ic_s_connect_r.png' : './assets/ic_s_connect_g.png';
+        });
+      }
+
+      function updateOutdoorPowerStatus(isPowered) {
+        const defaultValues = ['90%', '75%', '82%'];
+        document.querySelectorAll('.home-outdoor-power-label').forEach((item) => {
+          item.textContent = isPowered ? '門外供電中' : '門外電量';
+        });
+        document.querySelectorAll('.home-outdoor-power-value').forEach((item, index) => {
+          item.textContent = isPowered ? '-' : defaultValues[index] || '90%';
+        });
+      }
+
+      function setHomePowerVisible(isVisible) {
+        document.querySelectorAll('.home-lock-card').forEach((card) => {
+          card.classList.toggle('is-power-hidden', !isVisible);
+        });
+      }
+
+      function stopCardScanTimers() {
+        if (cardCountdownTimer) {
+          clearInterval(cardCountdownTimer);
+          cardCountdownTimer = null;
+        }
+        if (cardDotsTimer) {
+          clearInterval(cardDotsTimer);
+          cardDotsTimer = null;
+        }
+      }
+
+      function startCardScanTimers() {
+        stopCardScanTimers();
+
+        let remainingSeconds = 30;
+        let dotStep = 3;
+
+        if (cardCountdownSeconds) {
+          cardCountdownSeconds.textContent = String(remainingSeconds);
+        }
+        if (cardTrailingDots) {
+          cardTrailingDots.textContent = '...';
+        }
+
+        cardCountdownTimer = setInterval(() => {
+          remainingSeconds = Math.max(remainingSeconds - 1, 0);
+          if (cardCountdownSeconds) {
+            cardCountdownSeconds.textContent = String(remainingSeconds);
+          }
+          if (remainingSeconds === 0 && cardCountdownTimer) {
+            clearInterval(cardCountdownTimer);
+            cardCountdownTimer = null;
+          }
+        }, 1000);
+
+        cardDotsTimer = setInterval(() => {
+          dotStep = (dotStep % 3) + 1;
+          const dots = '.'.repeat(dotStep);
+          if (cardTrailingDots) {
+            cardTrailingDots.textContent = dots;
+          }
+        }, 450);
+      }
+
+      function showScreen(name) {
+        if (name === 'identify-lock' || name === 'scan-bind' || name === 'bind-result' || name === 'bind-success' || name === 'set-code' || name === 'set-mode' || name === 'set-mode-battery' || name === 'add-card' || name === 'card-success' || name === 'home') {
+          updateLockNameDisplays();
+        }
+
+        if (name === 'add-card') {
+          startCardScanTimers();
+        } else {
+          stopCardScanTimers();
+        }
+
+        screens.forEach((screen) => {
+          const isTarget = screen.dataset.screen === name;
+          screen.classList.toggle('is-active', isTarget);
+          screen.setAttribute('aria-hidden', String(!isTarget));
+        });
+
+        if (name === 'home') {
+          requestAnimationFrame(() => {
+            updateHomeBodyPosition();
+            equalizeCardHeights();
+            initHomeCarousel();
+          });
+        }
+      }
+
+      function showSetModeBranch() {
+        showScreen(currentFlowScenario === 'battery' ? 'set-mode-battery' : 'set-mode');
+      }
+
+      const addLockPopup = document.querySelector('#addLockPopup');
+      const addLockPopupClose = document.querySelector('#addLockPopupClose');
+      const addLockPopupBackdrop = document.querySelector('#addLockPopupBackdrop');
+      const popupSetupNewLock = document.querySelector('#popupSetupNewLock');
+      const popupOpenShareCode = document.querySelector('#popupOpenShareCode');
+
+      function openAddLockPopup() {
+        addLockPopup?.classList.add('is-open');
+        addLockPopup?.setAttribute('aria-hidden', 'false');
+      }
+
+      function closeAddLockPopup() {
+        addLockPopup?.classList.remove('is-open');
+        addLockPopup?.setAttribute('aria-hidden', 'true');
+      }
+
+      const homeAddLockButton = document.querySelector('.home-header button[aria-label="新增電子鎖"]');
+      homeAddLockButton?.addEventListener('click', openAddLockPopup);
+      addLockPopupClose?.addEventListener('click', closeAddLockPopup);
+      addLockPopupBackdrop?.addEventListener('click', closeAddLockPopup);
+      popupSetupNewLock?.addEventListener('click', () => {
+        closeAddLockPopup();
+        showScreen('select-location');
+      });
+      popupOpenShareCode?.addEventListener('click', () => {
+        closeAddLockPopup();
+        addHomeNextScreen = 'scan-bind';
+        showScreen('add-home');
+      });
+      document.querySelector('#selLocGo')?.addEventListener('click', () => showScreen('scan-bind'));
+      document.querySelector('#scanBindFrame')?.addEventListener('click', () => showScreen('bind-result'));
+      document.querySelector('#bindResultNext')?.addEventListener('click', () => showScreen('set-code'));
+      document.querySelector('#bindResultHomeBtn')?.addEventListener('click', () => showScreen('home'));
+
+      startButton?.addEventListener('click', () => {
+        addHomeNextScreen = 'add-lock';
+        showScreen('add-home');
+      });
+      openShareCodeButton?.addEventListener('click', () => showScreen('share-code'));
+      shareCodeHomeButton?.addEventListener('click', () => showScreen('home'));
+      nextBindLockButton?.addEventListener('click', () => {
+        savedDescription = lockDescriptionInput?.value.trim() || '';
+        showScreen(addHomeNextScreen);
+      });
+      continueAddLock01Button?.addEventListener('click', () => showScreen('add-lock-settings'));
+      continueAddLockSettingsButton?.addEventListener('click', () => showScreen('add-lock-wifi'));
+      continueAddLock02Button?.addEventListener('click', () => showScreen('add-lock-qr'));
+      continueAddLock03Button?.addEventListener('click', () => showScreen('identify-lock'));
+      standardTutorialButtons.forEach((button) => {
+        button.addEventListener('click', () => showScreen('add-lock'));
+      });
+      scanFrameButton?.addEventListener('click', () => showScreen('bind-success'));
+      identifyHelpButton?.addEventListener('click', () => showScreen('identify-help'));
+      nextSetLockCodeButton?.addEventListener('click', () => showScreen('set-code'));
+      saveDoorCodeButton?.addEventListener('click', showSetModeBranch);
+      skipDoorCodeButton?.addEventListener('click', showSetModeBranch);
+      addAccessCardButton?.addEventListener('click', () => showScreen('add-card'));
+      addAccessCardFromBatteryModeButton?.addEventListener('click', () => showScreen('add-card'));
+      addCardScreen?.addEventListener('click', showCardSuccessForNewCard);
+      cardNameInput?.addEventListener('input', validateCardName);
+      lockLocationInput?.addEventListener('input', updateLockInputCounts);
+      lockNameInput?.addEventListener('input', updateLockInputCounts);
+      lockDescriptionInput?.addEventListener('input', () => {
+        if (lockDescriptionCount && lockDescriptionInput) {
+          lockDescriptionCount.textContent = `${lockDescriptionInput.value.length}/100`;
+        }
+      });
+      bindAnotherCardButton?.addEventListener('click', () => {
+        saveCurrentCardName();
+        showScreen('add-card');
+      });
+      startAppButton?.addEventListener('click', () => {
+        saveCurrentCardName();
+        showScreen('home');
+      });
+      startAppFromModeButton?.addEventListener('click', () => showScreen('home'));
+      startAppFromBatteryModeButton?.addEventListener('click', () => showScreen('home'));
+      deferSetupButtons.forEach((button) => {
+        button.addEventListener('click', openDeferSetupDialog);
+      });
+      returnSetupButton?.addEventListener('click', closeDeferSetupDialog);
+      confirmDeferSetupButton?.addEventListener('click', () => {
+        closeDeferSetupDialog();
+        showScreen('home');
+      });
+      doorCodeInput?.addEventListener('input', validateDoorCode);
+      confirmDoorCodeInput?.addEventListener('input', validateDoorCode);
+      doorCodeInput?.addEventListener('blur', validateDoorCode);
+      confirmDoorCodeInput?.addEventListener('blur', validateDoorCode);
+      backButtons.forEach((button) => {
+        button.addEventListener('click', () => showScreen(button.dataset.goto));
+      });
+      scenarioButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          scenarioButtons.forEach((item) => item.classList.toggle('is-active', item === button));
+          const scenario = button.dataset.scenario;
+          if (scenario?.startsWith('home-') && scenario !== 'home-a-plugged') {
+            updateOutdoorPowerStatus(false);
+          }
+          if (scenario?.startsWith('home-') && scenario !== 'home-ac-plugged') {
+            setHomePowerVisible(true);
+          }
+          if (scenario === 'home-disconnected') {
+            updateHomeConnectionStatus('門外件連線異常，僅能用手機開鎖', true);
+          }
+          if (scenario === 'home-normal' || scenario === 'home-a-plugged' || scenario === 'home-ac-plugged') {
+            updateHomeConnectionStatus('連線正常');
+          }
+          if (scenario === 'home-normal') {
+            showScreen('home');
+          }
+          if (scenario === 'plugged') {
+            currentFlowScenario = 'plugged';
+            showScreen('preparation');
+          }
+          if (scenario === 'battery') {
+            currentFlowScenario = 'battery';
+            const activeScreen = document.querySelector('.screen.is-active')?.dataset.screen;
+            if (activeScreen === 'set-mode' || activeScreen === 'set-mode-battery') {
+              showSetModeBranch();
+            } else {
+              showScreen('preparation');
+            }
+          }
+          if (scenario === 'home-a-plugged') {
+            updateOutdoorPowerStatus(true);
+          }
+          if (scenario === 'home-ac-plugged') {
+            setHomePowerVisible(false);
+          }
+        });
+      });
+      updateLockInputCounts();
+    </script>
+  </body>
+</html>

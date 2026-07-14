@@ -1,0 +1,9 @@
+{
+  "name": "on-boarding-prototype",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 5177",
+    "start": "python3 -m http.server 5177"
+  }
+}
